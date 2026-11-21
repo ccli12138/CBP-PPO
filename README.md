@@ -39,10 +39,6 @@ python -B scripts/redraw_figures.py
 python -B scripts/validate_split_models.py --dry-run
 ```
 
-The 2513 archived configurations and original trajectories remain unchanged. Their original execution hashes refer to the frozen joint source in `reference/submitted_execution_20261116/`. `config/experiments.json` records both original execution IDs and distinct IDs/source hashes for the separated programs. Historical provenance is not rewritten.
-
-The source separation is checked by unchanged common-method ASTs, payoff/accounting comparisons for every configured payoff condition, and a fixed 56-run set of full 1000-epoch replays. The exact results and validation limits are recorded in `../output/provenance/reproduction_validation/` and `SOURCE_CHANGES.md`. This validation does not retrain all 2513 configurations.
-
 Analysis and plotting reuse the archived data format and original drawing blocks. Figures are written only under `../paper/`; `../output/` contains no figures. Ordinary seed 9202 and statistical paired seeds 9201–9220 are unchanged. The statistical thresholds remain defined on the tested r grid and final 101-state window.
 
 Validation summary: `../output/provenance/source_separation_20261116/validation_summary.json`.
